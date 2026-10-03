@@ -1,0 +1,592 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Alex Sharma",
+      "email": "demo@pocketsmart.ai",
+      "password_hash": "$2b$10$q95zoIXj/tRMkWh4fDbcxugFcDLqzk8lukmWvDiSBdypvA8fKP5I.",
+      "created_at": "2026-09-27T17:44:06.931Z",
+      "updated_at": "2026-09-27T17:44:06.931Z",
+      "reminder_settings": {
+        "enabled": true,
+        "time": "20:00",
+        "frequency": "daily",
+        "channel": "browser_and_inapp",
+        "include_today_spent": true,
+        "min_spending_alert_enabled": true,
+        "custom_message": "Time to review today's spending and log any unrecorded expenses!"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Test Engineer",
+      "email": "testuser_1790531053070@example.com",
+      "password_hash": "$2b$10$KAtrg.ccOygnSjYKHIzQxOtqq//05.LOGd2dYP7/pQHiVT/PbN9OC",
+      "created_at": "2026-09-27T17:44:13.156Z",
+      "updated_at": "2026-09-27T17:44:13.156Z"
+    },
+    {
+      "id": 3,
+      "name": "Mani kandan M",
+      "email": "itzmanikandan03@gmail.com",
+      "password_hash": "$2b$10$MTvqHM.KSEASR34ppappueeWWYOcRpiWU7HcL2Oju/qQLUUs9e/hy",
+      "created_at": "2026-09-27T18:01:27.762Z",
+      "updated_at": "2026-09-27T18:01:27.762Z"
+    },
+    {
+      "id": 4,
+      "name": "Test Engineer",
+      "email": "testuser_1790532096989@example.com",
+      "password_hash": "$2b$10$msy1O4Ay..VHchvZPGg.CevVbyIHGYa/oB4yy.uzGH9LOUtU2GKyy",
+      "created_at": "2026-09-27T18:01:37.074Z",
+      "updated_at": "2026-09-27T18:01:37.074Z"
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Food",
+      "icon": "Utensils",
+      "created_at": "2026-09-27T17:44:06.823Z"
+    },
+    {
+      "id": 2,
+      "name": "Transport",
+      "icon": "Car",
+      "created_at": "2026-09-27T17:44:06.824Z"
+    },
+    {
+      "id": 3,
+      "name": "Shopping",
+      "icon": "ShoppingBag",
+      "created_at": "2026-09-27T17:44:06.824Z"
+    },
+    {
+      "id": 4,
+      "name": "Entertainment",
+      "icon": "Film",
+      "created_at": "2026-09-27T17:44:06.824Z"
+    },
+    {
+      "id": 5,
+      "name": "Bills",
+      "icon": "Receipt",
+      "created_at": "2026-09-27T17:44:06.824Z"
+    },
+    {
+      "id": 6,
+      "name": "Education",
+      "icon": "GraduationCap",
+      "created_at": "2026-09-27T17:44:06.824Z"
+    },
+    {
+      "id": 7,
+      "name": "Healthcare",
+      "icon": "HeartPulse",
+      "created_at": "2026-09-27T17:44:06.824Z"
+    },
+    {
+      "id": 8,
+      "name": "Rent",
+      "icon": "Home",
+      "created_at": "2026-09-27T17:44:06.824Z"
+    },
+    {
+      "id": 9,
+      "name": "Savings",
+      "icon": "PiggyBank",
+      "created_at": "2026-09-27T17:44:06.824Z"
+    },
+    {
+      "id": 10,
+      "name": "Other",
+      "icon": "Tag",
+      "created_at": "2026-09-27T17:44:06.824Z"
+    }
+  ],
+  "incomes": [
+    {
+      "id": 1,
+      "user_id": 1,
+      "amount": 75000,
+      "source": "Tech Corp Salary",
+      "date": "2026-09-01",
+      "description": "Primary monthly corporate salary",
+      "created_at": "2026-09-27T17:44:06.931Z"
+    },
+    {
+      "id": 2,
+      "user_id": 1,
+      "amount": 15000,
+      "source": "Freelance UI Consulting",
+      "date": "2026-09-12",
+      "description": "Fintech Dashboard Design milestone",
+      "created_at": "2026-09-27T17:44:06.931Z"
+    },
+    {
+      "id": 3,
+      "user_id": 2,
+      "amount": 60000,
+      "source": "Monthly Salary",
+      "date": "2026-09-27",
+      "description": "Engineering payroll",
+      "created_at": "2026-09-27T17:44:13.171Z"
+    },
+    {
+      "id": 4,
+      "user_id": 1,
+      "amount": 30000,
+      "source": "SALARY",
+      "date": "2026-09-27",
+      "description": "",
+      "created_at": "2026-09-27T17:49:41.780Z"
+    },
+    {
+      "id": 5,
+      "user_id": 4,
+      "amount": 60000,
+      "source": "Monthly Salary",
+      "date": "2026-09-27",
+      "description": "Engineering payroll",
+      "created_at": "2026-09-27T18:01:37.085Z"
+    },
+    {
+      "id": 6,
+      "user_id": 3,
+      "amount": 400000,
+      "source": "BUISSNES",
+      "date": "2026-09-27",
+      "description": "",
+      "created_at": "2026-09-27T18:04:02.730Z"
+    },
+    {
+      "id": 7,
+      "user_id": 3,
+      "amount": 40000000000,
+      "source": "SALARY",
+      "date": "2026-09-27",
+      "description": "",
+      "created_at": "2026-09-27T18:05:26.172Z"
+    }
+  ],
+  "expenses": [
+    {
+      "id": 1,
+      "user_id": 1,
+      "category_id": 8,
+      "amount": 25000,
+      "description": "Monthly Apartment Rent",
+      "payment_method": "Bank Transfer",
+      "expense_date": "2026-09-02",
+      "created_at": "2026-09-27T17:44:06.931Z"
+    },
+    {
+      "id": 2,
+      "user_id": 1,
+      "category_id": 5,
+      "amount": 2200,
+      "description": "Electricity & Fiber Internet Bill",
+      "payment_method": "UPI",
+      "expense_date": "2026-09-05",
+      "created_at": "2026-09-27T17:44:06.931Z"
+    },
+    {
+      "id": 3,
+      "user_id": 1,
+      "category_id": 1,
+      "amount": 3400,
+      "description": "Supermarket Groceries & Supplies",
+      "payment_method": "Credit Card",
+      "expense_date": "2026-09-06",
+      "created_at": "2026-09-27T17:44:06.931Z"
+    },
+    {
+      "id": 4,
+      "user_id": 1,
+      "category_id": 2,
+      "amount": 1400,
+      "description": "Fuel Refill & Metro Card",
+      "payment_method": "UPI",
+      "expense_date": "2026-09-08",
+      "created_at": "2026-09-27T17:44:06.931Z"
+    },
+    {
+      "id": 5,
+      "user_id": 1,
+      "category_id": 3,
+      "amount": 5800,
+      "description": "Amazon Ergonomic Chair & Running Shoes",
+      "payment_method": "Credit Card",
+      "expense_date": "2026-09-14",
+      "created_at": "2026-09-27T17:44:06.931Z"
+    },
+    {
+      "id": 6,
+      "user_id": 1,
+      "category_id": 1,
+      "amount": 4100,
+      "description": "Team Dinner & Dessert",
+      "payment_method": "Debit Card",
+      "expense_date": "2026-09-18",
+      "created_at": "2026-09-27T17:44:06.931Z"
+    },
+    {
+      "id": 7,
+      "user_id": 1,
+      "category_id": 4,
+      "amount": 1200,
+      "description": "IMAX Movie Tickets & Snacks",
+      "payment_method": "UPI",
+      "expense_date": "2026-09-21",
+      "created_at": "2026-09-27T17:44:06.931Z"
+    },
+    {
+      "id": 8,
+      "user_id": 2,
+      "category_id": 1,
+      "amount": 2700,
+      "description": "Supermarket Dinner Supplies",
+      "payment_method": "UPI",
+      "expense_date": "2026-09-27",
+      "created_at": "2026-09-27T17:44:13.186Z"
+    },
+    {
+      "id": 9,
+      "user_id": 2,
+      "category_id": 1,
+      "amount": 500,
+      "description": "Dessert bakery",
+      "payment_method": "Cash",
+      "expense_date": "2026-09-27",
+      "created_at": "2026-09-27T17:44:13.207Z"
+    },
+    {
+      "id": 10,
+      "user_id": 1,
+      "category_id": 1,
+      "amount": 1222,
+      "description": "DINNER WITH FRIENDS",
+      "payment_method": "Cash",
+      "expense_date": "2026-09-19",
+      "created_at": "2026-09-27T17:50:57.694Z"
+    },
+    {
+      "id": 11,
+      "user_id": 4,
+      "category_id": 1,
+      "amount": 2700,
+      "description": "Supermarket Dinner Supplies",
+      "payment_method": "UPI",
+      "expense_date": "2026-09-27",
+      "created_at": "2026-09-27T18:01:37.096Z"
+    },
+    {
+      "id": 12,
+      "user_id": 4,
+      "category_id": 1,
+      "amount": 500,
+      "description": "Dessert bakery",
+      "payment_method": "Cash",
+      "expense_date": "2026-09-27",
+      "created_at": "2026-09-27T18:01:37.113Z"
+    },
+    {
+      "id": 13,
+      "user_id": 3,
+      "category_id": 1,
+      "amount": 300,
+      "description": "BRINIYANI",
+      "payment_method": "UPI",
+      "expense_date": "2026-09-27",
+      "created_at": "2026-09-27T18:04:32.975Z"
+    },
+    {
+      "id": 14,
+      "user_id": 3,
+      "category_id": 1,
+      "amount": 45005,
+      "description": "FOOD",
+      "payment_method": "UPI",
+      "expense_date": "2026-09-27",
+      "created_at": "2026-09-27T18:05:59.867Z"
+    }
+  ],
+  "budgets": [
+    {
+      "id": 1,
+      "user_id": 1,
+      "category_id": 1,
+      "amount": 8000,
+      "month": 9,
+      "year": 2026,
+      "created_at": "2026-09-27T17:44:06.931Z"
+    },
+    {
+      "id": 2,
+      "user_id": 1,
+      "category_id": 8,
+      "amount": 25000,
+      "month": 9,
+      "year": 2026,
+      "created_at": "2026-09-27T17:44:06.931Z"
+    },
+    {
+      "id": 3,
+      "user_id": 1,
+      "category_id": 3,
+      "amount": 5000,
+      "month": 9,
+      "year": 2026,
+      "created_at": "2026-09-27T17:44:06.931Z"
+    },
+    {
+      "id": 4,
+      "user_id": 1,
+      "category_id": 2,
+      "amount": 4000,
+      "month": 9,
+      "year": 2026,
+      "created_at": "2026-09-27T17:44:06.931Z"
+    },
+    {
+      "id": 5,
+      "user_id": 1,
+      "category_id": 5,
+      "amount": 4500,
+      "month": 9,
+      "year": 2026,
+      "created_at": "2026-09-27T17:44:06.931Z"
+    },
+    {
+      "id": 6,
+      "user_id": 1,
+      "category_id": 4,
+      "amount": 3500,
+      "month": 9,
+      "year": 2026,
+      "created_at": "2026-09-27T17:44:06.931Z"
+    },
+    {
+      "id": 7,
+      "user_id": 2,
+      "category_id": 1,
+      "amount": 3000,
+      "month": 9,
+      "year": 2026,
+      "created_at": "2026-09-27T17:44:13.179Z"
+    },
+    {
+      "id": 8,
+      "user_id": 4,
+      "category_id": 1,
+      "amount": 3000,
+      "month": 9,
+      "year": 2026,
+      "created_at": "2026-09-27T18:01:37.091Z"
+    }
+  ],
+  "savings_goals": [
+    {
+      "id": 1,
+      "user_id": 1,
+      "name": "MacBook Pro M3 Max",
+      "target_amount": 150000,
+      "current_amount": 95000,
+      "target_date": "2026-12-31",
+      "description": "High performance workstation for coding",
+      "created_at": "2026-09-27T17:44:06.931Z"
+    },
+    {
+      "id": 2,
+      "user_id": 1,
+      "name": "Emergency Reserve Fund",
+      "target_amount": 200000,
+      "current_amount": 140000,
+      "target_date": "2027-06-30",
+      "description": "6 months liquid emergency buffer",
+      "created_at": "2026-09-27T17:44:06.931Z"
+    },
+    {
+      "id": 3,
+      "user_id": 1,
+      "name": "Japan Vacation",
+      "target_amount": 120000,
+      "current_amount": 40000,
+      "target_date": "2027-03-15",
+      "description": "Tokyo & Kyoto 2-week itinerary",
+      "created_at": "2026-09-27T17:44:06.931Z"
+    }
+  ],
+  "recommendations": [
+    {
+      "id": 1,
+      "user_id": 2,
+      "type": "budget_warning",
+      "title": "Budget Alert: Food",
+      "message": "Your Food budget is almost exhausted (90% used, ₹300 remaining).",
+      "priority": "medium",
+      "is_read": false,
+      "created_at": "2026-09-27T17:44:13.200Z"
+    },
+    {
+      "id": 2,
+      "user_id": 2,
+      "type": "highest_spending",
+      "title": "Major Expense Area: Food",
+      "message": "Food represents 100% (₹2,700) of your overall monthly spending.",
+      "priority": "high",
+      "is_read": false,
+      "created_at": "2026-09-27T17:44:13.200Z"
+    },
+    {
+      "id": 3,
+      "user_id": 2,
+      "type": "healthy_savings",
+      "title": "Excellent Savings Discipline",
+      "message": "Great job! You are saving 96% of your income. Consider allocating extra surplus toward your savings goals.",
+      "priority": "low",
+      "is_read": false,
+      "created_at": "2026-09-27T17:44:13.200Z"
+    },
+    {
+      "id": 4,
+      "user_id": 1,
+      "type": "budget_warning",
+      "title": "Budget Alert: Food",
+      "message": "Your Food budget is almost exhausted (94% used, ₹500 remaining).",
+      "priority": "medium",
+      "is_read": false,
+      "created_at": "2026-09-27T17:48:51.313Z"
+    },
+    {
+      "id": 5,
+      "user_id": 1,
+      "type": "budget_warning",
+      "title": "Budget Alert: Rent",
+      "message": "Your Rent budget is almost exhausted (100% used, ₹0 remaining).",
+      "priority": "medium",
+      "is_read": false,
+      "created_at": "2026-09-27T17:48:51.313Z"
+    },
+    {
+      "id": 6,
+      "user_id": 1,
+      "type": "budget_exceeded",
+      "title": "Budget Exceeded: Shopping",
+      "message": "Your Shopping spending is ₹800 above your monthly budget. Consider curtailing discretionary purchases in this category.",
+      "priority": "high",
+      "is_read": false,
+      "created_at": "2026-09-27T17:48:51.313Z"
+    },
+    {
+      "id": 7,
+      "user_id": 1,
+      "type": "highest_spending",
+      "title": "Major Expense Area: Rent",
+      "message": "Rent represents 58% (₹25,000) of your overall monthly spending.",
+      "priority": "high",
+      "is_read": false,
+      "created_at": "2026-09-27T17:48:51.313Z"
+    },
+    {
+      "id": 8,
+      "user_id": 1,
+      "type": "healthy_savings",
+      "title": "Excellent Savings Discipline",
+      "message": "Great job! You are saving 52% of your income. Consider allocating extra surplus toward your savings goals.",
+      "priority": "low",
+      "is_read": false,
+      "created_at": "2026-09-27T17:48:51.313Z"
+    },
+    {
+      "id": 9,
+      "user_id": 4,
+      "type": "budget_warning",
+      "title": "Budget Alert: Food",
+      "message": "Your Food budget is almost exhausted (90% used, ₹300 remaining).",
+      "priority": "medium",
+      "is_read": false,
+      "created_at": "2026-09-27T18:01:37.106Z"
+    },
+    {
+      "id": 10,
+      "user_id": 4,
+      "type": "highest_spending",
+      "title": "Major Expense Area: Food",
+      "message": "Food represents 100% (₹2,700) of your overall monthly spending.",
+      "priority": "high",
+      "is_read": false,
+      "created_at": "2026-09-27T18:01:37.106Z"
+    },
+    {
+      "id": 11,
+      "user_id": 4,
+      "type": "healthy_savings",
+      "title": "Excellent Savings Discipline",
+      "message": "Great job! You are saving 96% of your income. Consider allocating extra surplus toward your savings goals.",
+      "priority": "low",
+      "is_read": false,
+      "created_at": "2026-09-27T18:01:37.106Z"
+    },
+    {
+      "id": 12,
+      "user_id": 3,
+      "type": "highest_spending",
+      "title": "Major Expense Area: Food",
+      "message": "Food represents 100% (₹300) of your overall monthly spending.",
+      "priority": "high",
+      "is_read": false,
+      "created_at": "2026-09-27T18:04:33.083Z"
+    },
+    {
+      "id": 13,
+      "user_id": 3,
+      "type": "healthy_savings",
+      "title": "Excellent Savings Discipline",
+      "message": "Great job! You are saving 100% of your income. Consider allocating extra surplus toward your savings goals.",
+      "priority": "low",
+      "is_read": false,
+      "created_at": "2026-09-27T18:04:33.083Z"
+    },
+    {
+      "id": 14,
+      "user_id": 1,
+      "type": "budget_exceeded",
+      "title": "Budget Exceeded: Food",
+      "message": "Your Food spending is ₹722 above your monthly budget. Consider curtailing discretionary purchases in this category.",
+      "priority": "high",
+      "is_read": false,
+      "created_at": "2026-09-27T18:11:41.142Z"
+    }
+  ],
+  "notifications": [
+    {
+      "id": 1,
+      "user_id": 1,
+      "title": "Budget Exceeded: Shopping",
+      "message": "Your Shopping spending is ₹800.00 above your monthly budget.",
+      "type": "alert",
+      "is_read": false,
+      "created_at": "2026-09-27T17:44:06.931Z"
+    },
+    {
+      "id": 2,
+      "user_id": 1,
+      "title": "Budget Alert: Food",
+      "message": "Your Food budget is almost exhausted (93.8% used, ₹500.00 remaining).",
+      "type": "warning",
+      "is_read": false,
+      "created_at": "2026-09-27T17:44:06.931Z"
+    }
+  ],
+  "nextIds": {
+    "users": 5,
+    "categories": 11,
+    "incomes": 8,
+    "expenses": 15,
+    "budgets": 9,
+    "savings_goals": 4,
+    "recommendations": 15,
+    "notifications": 3
+  }
+}

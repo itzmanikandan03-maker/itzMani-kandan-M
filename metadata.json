@@ -1,0 +1,6 @@
+{
+  "name": "PocketSmart AI — Smart Budget & Recommendation Assistant",
+  "description": "Full-stack personal finance application with smart budgeting, expense categorization, savings goals, predictive analytics, and automated financial recommendations.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

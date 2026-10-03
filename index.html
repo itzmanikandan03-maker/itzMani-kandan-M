@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script>
+      // Suppress harmless Vite WebSocket / HMR disconnection notifications in AI Studio iframe
+      (function() {
+        function isViteHmrNoise(args) {
+          if (!args || args.length === 0) return false;
+          for (let i = 0; i < args.length; i++) {
+            const arg = args[i];
+            if (typeof arg === 'string') {
+              if (
+                arg.includes('[vite]') ||
+                arg === '[vite]' ||
+                arg.includes('failed to connect to websocket') ||
+                arg.includes('WebSocket') ||
+                arg.includes('websocket') ||
+                arg.includes('vite-plugin-pwa')
+              ) {
+                return true;
+              }
+            } else if (arg && typeof arg === 'object') {
+              const msg = arg.message || arg.reason || '';
+              if (
+                typeof msg === 'string' &&
+                (msg.includes('[vite]') ||
+                 msg.includes('WebSocket') ||
+                 msg.includes('websocket') ||
+                 msg.includes('failed to connect to websocket') ||
+                 msg.includes('vite-plugin-pwa'))
+              ) {
+                return true;
+              }
+              if (arg.target && (arg.target instanceof WebSocket || Object.prototype.toString.call(arg.target).includes('WebSocket'))) {
+                return true;
+              }
+            }
+          }
+          return false;
+        }
+
+        const origError = console.error;
+        console.error = function(...args) {
+          if (isViteHmrNoise(args)) {
+            console.debug('[vite-notice-ignored]', ...args);
+            return;
+          }
+          origError.apply(console, args);
+        };
+
+        const origWarn = console.warn;
+        console.warn = function(...args) {
+          if (isViteHmrNoise(args)) {
+            console.debug('[vite-notice-ignored]', ...args);
+            return;
+          }
+          origWarn.apply(console, args);
+        };
+
+        window.addEventListener('error', function(e) {
+          const msg = e && (e.message || (e.error && e.error.message)) || '';
+          if (
+            typeof msg === 'string' &&
+            (msg.includes('WebSocket') ||
+             msg.includes('websocket') ||
+             msg.includes('[vite]') ||
+             msg.includes('vite-plugin-pwa'))
+          ) {
+            e.preventDefault();
+            e.stopImmediatePropagation();
+          }
+        }, true);
+
+        window.addEventListener('unhandledrejection', function(e) {
+          const reason = e && (e.reason && (e.reason.message || String(e.reason))) || '';
+          if (
+            typeof reason === 'string' &&
+            (reason.includes('WebSocket') ||
+             reason.includes('websocket') ||
+             reason.includes('[vite]') ||
+             reason.includes('vite-plugin-pwa'))
+          ) {
+            e.preventDefault();
+            e.stopImmediatePropagation();
+          }
+        }, true);
+      })();
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <title>PocketSmart AI — Smart Budget & Recommendation Assistant</title>
+    <meta name="description" content="Full-stack personal finance application with smart budgeting, expense categorization, savings goals, predictive analytics, and automated financial recommendations." />
+    <meta property="og:title" content="PocketSmart AI — Smart Budget & Recommendation Assistant" />
+    <meta property="og:description" content="Full-stack personal finance application with smart budgeting, expense categorization, savings goals, predictive analytics, and automated financial recommendations." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Android & PWA App Metadata -->
+    <meta name="theme-color" content="#0f172a" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="PocketSmart" />
+    <meta name="application-name" content="PocketSmart AI" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+    <link rel="alternate icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+  </head>
+  <body class="bg-slate-900 text-slate-100 select-none antialiased">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

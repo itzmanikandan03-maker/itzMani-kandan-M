@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#020617" />
+    </linearGradient>
+    <linearGradient id="emerald" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+    <linearGradient id="glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34d399" />
+      <stop offset="100%" stop-color="#10b981" />
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="128" fill="url(#bg)" />
+  <circle cx="256" cy="256" r="190" stroke="#10b981" stroke-width="8" stroke-dasharray="12 12" fill="none" opacity="0.4" />
+  <!-- Wallet / Card Base -->
+  <rect x="136" y="180" width="240" height="152" rx="24" fill="url(#emerald)" filter="drop-shadow(0 12px 24px rgba(16, 185, 129, 0.35))" />
+  <!-- Card Detail -->
+  <rect x="160" y="210" width="48" height="36" rx="8" fill="#fef08a" opacity="0.9" />
+  <path d="M228 280 L272 236 L304 256 L348 204" stroke="#ffffff" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+  <polygon points="348,224 348,204 328,204" fill="#ffffff" />
+  <!-- Upward Trend Badge -->
+  <circle cx="348" cy="150" r="32" fill="url(#glow)" />
+  <path d="M340 160 L348 142 L356 160 M348 142 L348 166" stroke="#ffffff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+</svg>
